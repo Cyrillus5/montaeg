@@ -1,0 +1,25 @@
+.Form{
+    margin-top: 2.5rem;
+    padding: 0.3rem;
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+.Form-field{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.Form-field-label{
+    padding-right: 1rem;
+}
+
+.Form-field-input{
+    text-align: right;
+}
+
+.Form-results{
+    margin-top: 1rem;
+}
