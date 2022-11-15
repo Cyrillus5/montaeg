@@ -4,6 +4,7 @@ import taeg from '../taeg';
 import './Form.css';
 
 function FormTaeg() {
+    // Get the differents values of the form
     const [amount, setAmount] = useState(false);
     const getAmount = (event) => setAmount(event.target.value);
     const [rate, setRate] = useState(false);
@@ -18,12 +19,17 @@ function FormTaeg() {
     const getInsuranceRate = (event) => setInsuranceRate(event.target.value);
     console.log(amount, loanPeriod, rate,fileBrokerageFees, guaranteeFees, insuranceRate);
 
+    // Function to calculate taeg
     const getTaeg = () => {
+        // Get insurance cost 
         let insuranceCost = taeg.getInsuranceCost(insuranceRate, amount, loanPeriod);
-        taeg.getMonthlyPaymentAmount(rate, loanPeriod, amount);
+        // Get monthly payment amount
         let monthlyPaymentAmount = taeg.getMonthlyPaymentAmount(rate, loanPeriod, amount);
+        // Get interests amount
         let interestsCost = taeg.getInterestsCost(loanPeriod, amount, monthlyPaymentAmount);
+        // Get global monthly payment amount with insurance + file brokerage fees + guarantee fees
         let totalMonthlyPaymentAmount = taeg.getTotalMonthlyPaymentAmount(Number(amount), Number(guaranteeFees), Number(fileBrokerageFees), Number(insuranceCost), Number(interestsCost), Number(loanPeriod));
+        // Get taeg
         let taegNewRate = taeg.getTaeg(loanPeriod, amount, totalMonthlyPaymentAmount);
 
         console.log(insuranceCost);
