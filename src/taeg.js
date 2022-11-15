@@ -1,10 +1,10 @@
 const taeg = {
-    amount : 300000, // amount borrowed in euros
-    loanPeriod : 240, // term of the loan in months
-    nominalFee : 1.7, // nominal rate in percent
-    guaranteeFees : 1500, // guarantee fees in euros
-    fileBrokerageFees : 500, // file and brokerage fees in euros
-    insuranceRate : 0.3, // insurance rate in percent
+    // amount : 300000, amount borrowed in euros
+    // loanPeriod : 240, term of the loan in months
+    // nominalFee : 1.7, nominal rate in percent
+    // guaranteeFees : 1500, guarantee fees in euros
+    // fileBrokerageFees : 500, file and brokerage fees in euros
+    // insuranceRate : 0.3, insurance rate in percent
 
     // cost of insurance
     getInsuranceCost : function (insuranceRate, amount, loanPeriod) {
@@ -59,10 +59,5 @@ const taeg = {
     }
 
 };
-
-// console.log("Coût de l'assurance = " + taeg.getInsuranceCost() + ' euros');
-// console.log("Montant des mensualités = " + taeg.getMonthlyPaymentAmount() + ' euros');
-// console.log("Montant des interets = " + taeg.getInterestsCost() + ' euros');
-// console.log("TAEG = " + taeg.getTaeg() + ' %');
 
 export default taeg;
