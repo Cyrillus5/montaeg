@@ -1,6 +1,5 @@
+import FormTaeg from '../Form/Form';
 import './App.css';
-
-import FormTaeg from '../src/Form/Form';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 import taeg from '../taeg';
 import './Form.css';
 
@@ -36,9 +36,10 @@ function FormTaeg() {
         console.log(monthlyPaymentAmount);
         console.log(interestsCost);
         console.log(totalMonthlyPaymentAmount);
-        console.log(taegNewRate);
+        console.log("Mon taeg est de " + taegNewRate);
 
-        return taegNewRate;
+        
+        return [taegNewRate, monthlyPaymentAmount];
     }
 
     return (
@@ -48,7 +49,7 @@ function FormTaeg() {
             <Form>
                 <Form.Field className='Form-field'>
                     <label className='Form-field-label'>Montant emprunté</label>
-                    <input onChange={getAmount} className='Form-field-input' placeholder='en €' />
+                    <input onChange={getAmount} className='Form-field-input' placeholder='en €'/>
                 </Form.Field>
                 <Form.Field className='Form-field'>
                     <label className='Form-field-label'>Taux du prêt hors assurance</label>
@@ -70,11 +71,15 @@ function FormTaeg() {
                     <label className='Form-field-label'>Frais de garantie du prêt</label>
                     <input className='Form-field-input' onChange={getGuaranteeFees} placeholder="en €" />
                 </Form.Field>
-                <Button className='Form-field-button' onClick={getTaeg} type='submit'>Calculer mon TAEG</Button>
             </Form>
             <div className='Form-results'>
-            <p>Mon TAEG est de : <input type='text' value={getTaeg()}></input></p>
+                <label className='Form-results-label'>Mon TAEG est de</label>
+                <input className='Form-results-input' type='text' value={getTaeg()[0]} placeholder="0 %" />
             </div>
+            {(getTaeg()[0] !== undefined)  && <div className='Form-results'>
+                <label className='Form-results-label'>Mensualité (en €)</label>
+                <input className='Form-results-input' type='text' value={getTaeg()[1]} />
+            </div>}
         </div>
         
             
