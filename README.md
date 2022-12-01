@@ -5,4 +5,4 @@ Use this project to calcul a TAEG(taux annuel effectif global)
 - SASS
 - JEST (unit testing)
 
-![Alt text](./src/monTAEG.png?raw=true)
+![Alt text](./src/Img/monTAEG.png?raw=true)
