@@ -1,3 +1,5 @@
+@use '/src/Styles/vars';
+
 .Form{
     margin-top: 2.5rem;
     padding: 0.3rem;
@@ -37,7 +39,7 @@
 
 .Form-field-label{
     padding-right: 1rem;
-    color: #180057;
+    color: vars.$color-text;
     font-weight:600;
     line-height: 0.8rem;
     font-size: 1rem;
@@ -46,14 +48,14 @@
 
 .Form-field-input{
     text-align: right;
-    color:#ff9d00;
+    color:vars.$color-input;
     margin: 3px 3px;
     font-weight: bold;
 }
 
 .Form-field-button{
     text-align: right;
-    color:#ff9d00;
+    color: vars.$color-input;
     margin: 3px 3px;
     font-weight: bold;
     border-radius: 20px;
@@ -63,8 +65,8 @@
 }
 
 .Form-results{
-    /* margin-top: 1rem; */
-    color: black;
+    margin-top: 0.5rem;
+    color: vars.$color-text;
     font-weight: bold;
     text-align: left;
     display: flex;
@@ -74,7 +76,7 @@
 }
 
 .Form-results-label{
-    color: black;
+    color: vars.$color-text;
     font-weight: bold;
     vertical-align: bottom;
     min-width: 130px;
@@ -82,7 +84,7 @@
 }
 
 .Form-results-input{
-    color:#757575;
+    color: vars.$color-textResult;
     font-weight: bold;
     font-size: 1.5rem;
     border: 0;
@@ -103,11 +105,11 @@
 
     .Form-all{
         margin: auto;
-        margin-top: 0;
+        margin-top: 1rem;
     }
 
     .Form-field-label{
-      line-height: 0.8rem;
+        line-height: 0.8rem;
         font-size: 0.8rem;  
     }
     

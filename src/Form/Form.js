@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
-import taeg from '../taeg';
-import './Form.css';
+import taeg from '../Js/taeg';
+import './Form.scss';
 
 function FormTaeg() {
     // Get the differents values of the form
@@ -32,10 +32,10 @@ function FormTaeg() {
         // Get taeg
         let taegNewRate = taeg.getTaeg(loanPeriod, amount, totalMonthlyPaymentAmount);
 
-        console.log(insuranceCost);
-        console.log(monthlyPaymentAmount);
-        console.log(interestsCost);
-        console.log(totalMonthlyPaymentAmount);
+        console.log("InsuranceCost = " + insuranceCost);
+        console.log("monthlyPaymentAmount " + monthlyPaymentAmount);
+        console.log("interestsCost " + interestsCost);
+        console.log("totalMonthlyPaymentAmount " + totalMonthlyPaymentAmount);
         console.log("Mon taeg est de " + taegNewRate);
 
         

@@ -1,0 +1,15 @@
+@use '/src/Styles/vars';
+
+.App {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 1rem;
+
+  &-h1{
+    color: vars.$color-h1;
+    font-size: 1.5rem; 
+  }
+}
+
+
